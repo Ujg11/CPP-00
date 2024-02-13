@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 12:03:20 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/13 12:55:19 by ojimenez         ###   ########.fr       */
+/*   Created: 2024/02/13 12:54:51 by ojimenez          #+#    #+#             */
+/*   Updated: 2024/02/13 12:55:33 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-
 #include "phonebook.h"
 
-class PhoneBook
+PhoneBook::PhoneBook(/* args */)
 {
-	private:
-		Contact _list[8];
-		int		_size;
-	public:
-		PhoneBook(void);
-		~PhoneBook(void);
-};
-
-
-
-#endif
+}
+PhoneBook::~PhoneBook()
+{
+}
