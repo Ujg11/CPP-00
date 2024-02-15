@@ -44,32 +44,32 @@ void	Contact::setDarkestSecret(std::string str)
 	this->_darkestSecret = str;
 }
 
-std::string	Contact::getFirstName(void)
+std::string	Contact::getFirstName(void) const
 {
 	return (this->_firstName);
 }
 
-std::string	Contact::getLastName(void)
+std::string	Contact::getLastName(void) const
 {
 	return (this->_lastName);
 }
 
-std::string Contact::getNikname(void)
+std::string Contact::getNikname(void) const
 {
 	return (this->_nickname);
 }
 
-std::string Contact::getPhone(void)
+std::string Contact::getPhone(void) const
 {
 	return (this->_phoneNumber);
 }
 
-std::string	Contact::getDarkestSecret(void)
+std::string	Contact::getDarkestSecret(void) const
 {
 	return (this->_darkestSecret);
 }
 
-void	Contact::displayContact(void)
+void	Contact::displayContact(void) const
 {
 	std::cout << "First Name: " << this->getFirstName() << std::endl;
 	std::cout << "Last Name: " << this->getLastName() << std::endl;
