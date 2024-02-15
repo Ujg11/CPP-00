@@ -16,7 +16,7 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = 
+SRC = main.cpp Contact.cpp PhoneBook.cpp PhoneBook_utils.cpp
 INC = $(addprefix -I, inc/)
 
 #DIRECTORIES

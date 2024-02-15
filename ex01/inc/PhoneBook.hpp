@@ -18,13 +18,14 @@
 class PhoneBook
 {
 	private:
-		Contact _list[8];
+		Contact _contacts[8];
 		int		_size;
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
+		void	add(void);
+		void	search(void);
+		void	displayPhoneBookContact(int index);
 };
-
-
 
 #endif

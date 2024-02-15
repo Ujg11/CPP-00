@@ -21,6 +21,7 @@
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
-
+void	displayTableHeader(void);
+void	printString(std::string str);
 
 #endif
