@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp Zombie.cpp ZombieHorde.cpp
 INC = Zombie.hpp
 
 #DIRECTORIES
