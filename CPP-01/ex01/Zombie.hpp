@@ -1,7 +1,6 @@
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 
-#include <cstdlib>
 #include <iostream>
 
 class  Zombie

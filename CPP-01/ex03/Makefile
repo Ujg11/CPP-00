@@ -1,11 +1,11 @@
-NAME = zombie01
+NAME = humans
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
-INC = Zombie.hpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
+INC = Weapon.hpp HumanA.hpp HumanB.hpp
 
 #DIRECTORIES
 D_OBJ = obj
