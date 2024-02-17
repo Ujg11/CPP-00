@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 14:33:29 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/17 14:33:29 by ojimenez         ###   ########.fr       */
+/*   Created: 2024/02/17 16:11:22 by ojimenez          #+#    #+#             */
+/*   Updated: 2024/02/17 16:11:22 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-
-class Harl
+int main(int argc, char *argv[])
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+	Harl h;
 
-	public:
-		Harl();
-		~Harl();
-		void complain( std::string level );
-};
-
-#endif
+	if (argc != 2)
+	{
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		return (1);
+	}
+	h.complain(argv[1]);
+	std::cout << std::endl;
+	return (0);
+}
