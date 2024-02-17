@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/02/17 14:33:06 by ojimenez          #+#    #+#              #
+#    Updated: 2024/02/17 14:33:06 by ojimenez         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = replace
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
