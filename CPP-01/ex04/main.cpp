@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 	std::string	filename = argv[1];
 	std::string	s1 = argv[2];
 	std::string	s2 = argv[3];
+	std::string outputFilename = filename + ".replaced";
 
 	std::ifstream infile(filename);
 	if (!infile.is_open())
@@ -36,7 +37,7 @@ int main(int argc, char *argv[])
 		std::cout << "Error al abrir el archivo " << filename << std::endl;
 		return (1);
 	}
-	std::ofstream outfile(filename, std::ios::out | std::ios::trunc); //Se abre en modo escritura y se trunca el contenido
+	std::ofstream outfile(outputFilename, std::ios::out | std::ios::trunc); //Se abre en modo escritura y se trunca el contenido
 	if (!outfile.is_open())
 	{
 		std::cout << "Error al abrir el archivo de salida " << filename << std::endl;
