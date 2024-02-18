@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:03:55 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/13 12:54:01 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/18 17:14:55 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,5 @@ void	Contact::displayContact(void) const
 	std::cout << "Nickname: " << this->getNikname() << std::endl;
 	std::cout << "Phone Number: " << this->getPhone() << std::endl;
 	std::cout << "Darkest Secret: " << this->getDarkestSecret() << std::endl;
+	std::cout << std::endl;
 }

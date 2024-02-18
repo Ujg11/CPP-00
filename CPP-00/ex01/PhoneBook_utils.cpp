@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:54:51 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/13 12:55:33 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:29:34 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	displayTableHeader(void)
 {
-	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "|	 Index   |First Name|Last Name | Nickname |" << std::endl;
+	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|  Index   |First Name|Last Name | Nickname |" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
 }
 
@@ -27,7 +27,7 @@ void	printString(std::string str)
 		std::cout << str << "|";
 	else if (str.length() > 10)
 	{
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 9; i++)
 			std::cout << str[i];
 		std::cout << ".|";
 	}
@@ -40,6 +40,6 @@ void	printString(std::string str)
 			std::cout << " ";
 			len++;
 		}
-		std::cout << ".|";
+		std::cout << "|";
 	}
 }
