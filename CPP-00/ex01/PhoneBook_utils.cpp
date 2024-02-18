@@ -34,12 +34,25 @@ void	printString(std::string str)
 	else if (str.length() < 10)
 	{
 		len = str.length();
-		std::cout << str;
 		while (len < 10)
 		{
 			std::cout << " ";
 			len++;
 		}
+		std::cout << str;
 		std::cout << "|";
 	}
+}
+
+bool	digitComprovation(std::string str)
+{
+	int	i = 0;
+
+	while (i < str.length())
+	{
+		if (!isdigit(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
 }

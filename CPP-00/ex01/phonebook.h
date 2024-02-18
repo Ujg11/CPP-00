@@ -17,11 +17,13 @@
 # include <cstring>
 # include <cstdlib>
 # include <iomanip>
+# include <cctype>
 
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
 void	displayTableHeader(void);
 void	printString(std::string str);
+bool	digitComprovation(std::string str);
 
 #endif

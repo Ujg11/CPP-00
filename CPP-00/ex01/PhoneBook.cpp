@@ -33,6 +33,8 @@ void	PhoneBook::add(void)
 	{
 		std::cout << "First name: ";
 		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(1);
 		if (str.empty())
 			std::cout << "Escribe algo, no puede quedar vacio" << std::endl;
 		else
@@ -46,6 +48,8 @@ void	PhoneBook::add(void)
 	{
 		std::cout << "Last name: ";
 		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(1);
 		if (str.empty())
 			std::cout << "Escribe algo, no puede quedar vacio" << std::endl;
 		else
@@ -59,6 +63,8 @@ void	PhoneBook::add(void)
 	{
 		std::cout << "Nikname: ";
 		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(1);
 		if (str.empty())
 			std::cout << "Escribe algo, no puede quedar vacio" << std::endl;
 		else
@@ -72,12 +78,19 @@ void	PhoneBook::add(void)
 	{
 		std::cout << "Phone Number: ";
 		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(1);
 		if (str.empty())
 			std::cout << "Escribe algo, no puede quedar vacio" << std::endl;
 		else
 		{
-			this->_contacts[this->_size % 8].setPhoneNumber(str);
-			line = true;
+			if (digitComprovation(str))
+			{
+				this->_contacts[this->_size % 8].setPhoneNumber(str);
+				line = true;
+			}
+			else
+				std::cout << "Solo se admiten numeros" << std::endl;
 		}
 	}
 	line = false;
@@ -85,6 +98,8 @@ void	PhoneBook::add(void)
 	{
 		std::cout << "Darkest Secret: ";
 		std::getline(std::cin, str);
+		if (std::cin.eof())
+			exit(1);
 		if (str.empty())
 			std::cout << "Escribe algo, no puede quedar vacio" << std::endl;
 		else
@@ -120,12 +135,14 @@ void	PhoneBook::search(void)
 	}
 	std::cout << "Que contacto deseas ver?" << std::endl;
 	std::cin >> str;
+	if (std::cin.eof())
+			exit(1);
 	if (!str.empty())
 	{
 		if (str.length() == 1 && std::isdigit(str[0]))
 		{
 			index = std::stoi(str);
-			if (index >= 1 && index <= 8)
+			if (index >= 1 && index <= 8 && index <= this->_size)
 			{
 				std::cout << "Contacto " << index << ":" << std::endl;
 				this->_contacts[index - 1].displayContact();
@@ -147,7 +164,7 @@ void	PhoneBook::displayPhoneBookContact(int index)
 	
 	index++;
 	pos = (index % 8);
-	std::cout << "|    " << (pos + 1)<< "     |";
+	std::cout << "|         " << (pos + 1)<< "|";
 	str = this->_contacts[pos].getFirstName();
 	printString(str);
 	str = this->_contacts[pos].getLastName();

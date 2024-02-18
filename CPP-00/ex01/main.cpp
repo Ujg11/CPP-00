@@ -24,6 +24,8 @@ int	main(void)
 		std::cout << "ADD" << std::endl << "SEARCH" << std::endl << "EXIT" << std::endl;
 		std::cout << std::endl;
 		std::cin >> input;
+		if (input.empty() || std::cin.eof())
+			return (1);
 		if (input.compare("ADD") == 0)
 			guia.add();
 		else if(input.compare("SEARCH") == 0)
