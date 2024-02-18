@@ -6,7 +6,7 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 14:30:18 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/17 14:30:18 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/02/18 17:50:47 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,10 @@ all : dir $(NAME)
 -include $(DEP)
 
 dir:
-	-mkdir $(D_OBJ)
+	@mkdir -p $(D_OBJ)
 
 $(D_OBJ)/%.o: %.cpp Makefile
-		$(CPP) $(FLAGS) -MMD -c $< -o $@
+		$(CPP) $(FLAGS) -MMD -MP -c $< -o $@
 		echo "file: $< to $@"
 	
 $(NAME): $(OBJ)

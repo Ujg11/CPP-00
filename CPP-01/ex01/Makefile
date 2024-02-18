@@ -6,13 +6,13 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 14:31:20 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/17 14:31:20 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/02/18 18:01:56 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie01
 CPP = c++
-FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 #-fsanitize=address
 RM = rm -rf
 
 #SOURCE
@@ -29,7 +29,7 @@ all : dir $(NAME)
 -include $(DEP)
 
 dir:
-	-mkdir $(D_OBJ)
+	@mkdir -p $(D_OBJ)
 
 $(D_OBJ)/%.o: %.cpp Makefile
 		$(CPP) $(FLAGS) -MMD -c $< -o $@

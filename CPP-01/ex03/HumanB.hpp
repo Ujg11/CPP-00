@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:32:22 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/17 14:32:22 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:16:44 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ class HumanB
 };
 
 #endif
-//HumanB usa un puntero y permite cambiar dinámicamente la instancia de Weapon durante el tiempo de vida de la instancia de HumanB.
+//HumanB usa un puntero y permite cambiar dinámicamente la instancia de Weapon 
+//durante el tiempo de vida de la instancia de HumanB.
