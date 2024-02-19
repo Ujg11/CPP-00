@@ -5,24 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 00:21:18 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/19 00:21:18 by ojimenez         ###   ########.fr       */
+/*   Created: 2024/02/19 13:59:40 by ojimenez          #+#    #+#             */
+/*   Updated: 2024/02/19 13:59:40 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
 #include <iostream>
+#include "Fixed.hpp"
 
-//Creamos objeto a
-//Creamos b haciendo que sea una copia de a
-//Creamos c y lo igualamos a b
 int main( void ) {
-Fixed a;
-Fixed b( a );
-Fixed c;
-c = b;
-std::cout << a.getRawBits() << std::endl;
-std::cout << b.getRawBits() << std::endl;
-std::cout << c.getRawBits() << std::endl;
-return 0;
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;//Se incrementa a antes de la expresión asi que se muestra
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;//Se incrementa a después de la expresión asi que sale sin cambios
+	std::cout << a << std::endl;//Podemos ver el incremento
+
+	std::cout << b << std::endl;
+
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
 }

@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/19 00:21:06 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/19 00:21:06 by ojimenez         ###   ########.fr        #
+#    Created: 2024/02/19 16:23:33 by ojimenez          #+#    #+#              #
+#    Updated: 2024/02/19 16:23:33 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed00
+NAME = triangle
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp Fixed.cpp
-INC = Fixed.hpp
+SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
+INC = Fixed.hpp Point.hpp
 
 #DIRECTORIES
 D_OBJ = obj

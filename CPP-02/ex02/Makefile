@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/19 00:21:06 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/19 00:21:06 by ojimenez         ###   ########.fr        #
+#    Created: 2024/02/19 13:58:44 by ojimenez          #+#    #+#              #
+#    Updated: 2024/02/19 13:58:44 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed00
+NAME = fixed02
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
