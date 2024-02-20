@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:01 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/17 14:33:01 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:24:30 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	std::string	filename = argv[1];
 	std::string	s1 = argv[2];
 	std::string	s2 = argv[3];
-	std::string outputFilename = filename + ".replaced";
+	std::string outputFilename = filename + ".replace";
 
 	std::ifstream infile(filename);
 	if (!infile.is_open())
