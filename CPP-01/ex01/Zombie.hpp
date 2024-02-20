@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:31:29 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/18 17:55:58 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:10:27 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class  Zombie
 		std::string _name;
 
 	public:
-		 Zombie();
-		~ Zombie();
+		 Zombie(void);
+		~ Zombie(void);
 		void announce(void);
 		void setName(std::string name);
 		std::string getName(void) const;
