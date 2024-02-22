@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:01 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/20 12:24:30 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:10:03 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ void	replace(std::ifstream &infile, const std::string &s1, const std::string &s2
 	while (std::getline(infile, str))
 	{
 		i = 0;
-		while ((i = str.find(s1, i)) != std::string::npos)
+		if (!s1.empty())
 		{
-			str = str.erase(i, s1.length()); //elimina s1
-			str = str.insert(i, s2);
-			i += s2.length();
+			while ((i = str.find(s1, i)) != std::string::npos)
+			{
+				str = str.erase(i, s1.length()); //elimina s1
+				str = str.insert(i, s2);
+				i += s2.length();
+			}
 		}
 		outfile << str << std::endl; //Es posa la linea canviada o sense canviar en cas de no trobar la cadena
 	}
@@ -56,7 +59,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	replace(infile, s1, s2, outfile);
-	std::cout << "Reemplazo hecho" << std::endl;
+	if (!s1.empty())
+		std::cout << "Reemplazo hecho" << std::endl;
+	else
+		std::cout << "El texto quedo intacto" << std::endl;
 	infile.close();
 	outfile.close();
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:11:52 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/20 12:38:36 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:47:33 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,34 +57,31 @@ void Harl::error( void )
 
 void Harl::complain( std::string level )
 {
-	void	(Harl::*f[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	state[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	size_t i = 0;
 
-	for (i = 0; i < state->size(); i++)
+	if (!level.empty())
 	{
-		if (level == state[i])
-			break;
+		for (i = 0; i < state->size() - 1; i++)
+		{
+			if (level.compare(state[i]) == 0)
+				break;
+		}
+		switch (i)
+		{
+			case DEBUG:
+				Harl::debug();
+			case INFO:
+				Harl::info();
+			case WARNING:
+				Harl::warning();
+			case ERROR:
+				Harl::error();
+				break;
+			default:
+				std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		}
 	}
-	switch (i)
-	{
-		case DEBUG:
-			for (int j=i; j < 4; j++)
-				(this->*f[j])();
-			break;
-		case INFO:
-			for (int j=i; j < 4; j++)
-				(this->*f[j])();
-			break;
-		case WARNING:
-			for (int j=i; j < 4; j++)
-				(this->*f[j])();
-			break;
-		case ERROR:
-			for (int j=i; j < 4; j++)
-				(this->*f[j])();
-			break;
-		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-	}
+	else
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }

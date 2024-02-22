@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:25 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/20 12:29:18 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:38:03 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,16 @@ void Harl::complain( std::string level )
 {
 	void	(Harl::*f[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	state[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-
-	for (size_t i = 0; i < state->size(); i++)
+	
+	if (!level.empty())
 	{
-		if (level == state[i])
+		for (size_t i = 0; i < state->size() - 1; i++)
 		{
-			(this->*f[i])(); //cridem a la funció en concret
-			return ;
+			if (level.compare(state[i]) == 0)
+			{
+				(this->*f[i])(); //cridem a la funció en concret
+				return ;
+			}
 		}
 	}
 	std::cout << "Nivel no encontrado, pruebe otra vez" << std::endl;

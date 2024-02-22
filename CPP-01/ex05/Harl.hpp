@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:29 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/20 12:28:53 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:24:09 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define HARL_HPP
 
 #include <iostream>
+#include <cstring>
 
 class Harl
 {

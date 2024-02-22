@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 22:23:45 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/20 22:23:45 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:48:04 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,15 @@ ClapTrap::ClapTrap(std::string name)
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
 }
+ClapTrap::ClapTrap(std::string name, unsigned int hit, unsigned int energy, unsigned int attack)
+{
+	std::cout << "Initialize constructor has been called" << std::endl;
+	this->_name = name;
+	this->_hitPoints = hit;
+	this->_energyPoints = energy;
+	this->_attackDamage = attack;
+}
+
 //Copy constructor
 ClapTrap::ClapTrap(const ClapTrap &ct)
 {
@@ -129,7 +138,11 @@ int	ClapTrap::getAttackDamage() const
 	return (this->_attackDamage);
 }
 
-void ClapTrap::setAttack(int attack)
+void ClapTrap::setAttack(unsigned int attack)
 {
 	this->_attackDamage = attack;
+}
+void ClapTrap::setEnergy(unsigned int energy)
+{
+	this->_energyPoints = energy;
 }

@@ -6,7 +6,7 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 22:23:54 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/20 22:23:54 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/02/22 15:34:34 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp ClapTrap.cpp 
-INC = ClapTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+INC = ClapTrap.hpp ScavTrap.hpp
 
 #DIRECTORIES
 D_OBJ = obj

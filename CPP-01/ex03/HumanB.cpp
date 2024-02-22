@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:32:17 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/18 18:16:17 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:01:26 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ HumanB::HumanB(std::string name)
 
 HumanB::~HumanB(void)
 {
-
 }
 
 void HumanB::attack(void)
 {
-	std::cout << this->_name << " attacks with their " << this->_arma->getType() << std::endl;
+	if (!this->_arma->getType().empty())
+		std::cout << this->_name << " attacks with their " << this->_arma->getType() << std::endl;
+	else
+		std::cout << this->_name << " don't have any weapon" << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &arma)
