@@ -25,7 +25,10 @@ ClapTrap::ClapTrap()
 ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << "Name constructor has been called" << std::endl;
-	this->_name = name;
+	if (!name.empty())
+		this->_name = name;
+	else
+		this->_name = "(null)";
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;

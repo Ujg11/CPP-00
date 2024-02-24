@@ -152,3 +152,8 @@ void ClapTrap::setEnergy(unsigned int energy)
 {
 	this->_energyPoints = energy;
 }
+
+void ClapTrap::setHitPoints(unsigned int hit)
+{
+	this->_hitPoints = hit;
+}

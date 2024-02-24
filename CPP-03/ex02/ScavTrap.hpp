@@ -18,19 +18,19 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-	bool	_guardGate;
+	private:
+		bool	_guardGate;
+		
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &st);
+		ScavTrap &operator=(const ScavTrap &st);
+		~ScavTrap();
+		void	attack(const std::string& target);
 	
-public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(const ScavTrap &st);
-	ScavTrap &operator=(const ScavTrap &st);
-	~ScavTrap();
-	void	attack(const std::string& target);
-
-	void	guardGate();
-	bool	getGuardGate() const;
+		void	guardGate();
+		bool	getGuardGate() const;
 };
 
 
