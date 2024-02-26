@@ -14,33 +14,23 @@
 
 int main(void)
 {
-	/*ScavTrap st("Scav Trap");
-	std::cout << std::endl;
-	FragTrap ft("Flag trap");
-	std::cout << std::endl;
-	FragTrap ft2;
-	std::cout << std::endl;
-	ClapTrap ct("Popeye");
-	std::cout << std::endl;
-
-	st.attack("A ese");
-	st.setAttack(4);
-	st.attack("A ese");
-	st.takeDamage(30);
-	st.beRepaired(10);
-
-	ft.highFivesGuys();
-	ft.attack("A aquel");
-	ft.beRepaired(20);
-	ft.takeDamage(50);
-
-	ct.attack("Paco");*/
-
 	DiamondTrap diamond("Uri");
 	std::cout << diamond.getName() << std::endl;
 	std::cout << diamond.getHitPoints() << std::endl;
 	std::cout << diamond.getEnergyPoints() << std::endl;
 	std::cout << diamond.getAttackDamage() << std::endl;
+	diamond.whoAmI();
+	std::cout << std::endl;
 
+	DiamondTrap diamond2;
+	std::cout << diamond2.getName() << std::endl;
+	std::cout << diamond2.getHitPoints() << std::endl;
+	std::cout << diamond2.getEnergyPoints() << std::endl;
+	std::cout << diamond2.getAttackDamage() << std::endl;
+	diamond2.whoAmI();
+	std::cout << std::endl;
+
+	diamond2.attack("hola");
+	std::cout << std::endl;
 	return (0);
 }

@@ -31,6 +31,10 @@ class ScavTrap : virtual public ClapTrap
 	
 		void	guardGate();
 		bool	getGuardGate() const;
+
+		static const unsigned int STHhit = 100;
+		static const unsigned int STEnergy = 50;
+		static const unsigned int STAttack = 20;
 };
 
 

@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
-INC = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+INC = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 #DIRECTORIES
 D_OBJ = obj

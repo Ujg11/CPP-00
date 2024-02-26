@@ -27,6 +27,10 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap();
 
 		void highFivesGuys(void);
+
+		static const unsigned int FTHhit = 100;
+		static const unsigned int FTEnergy = 100;
+		static const unsigned int FTAttack = 30;
 };
 
 #endif
