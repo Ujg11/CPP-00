@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:31 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/22 19:38:38 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:27:31 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main(void)
 	h.complain("INFO");
 	h.complain("WARNING");
 	h.complain("ERROR");
-	h.complain("jhjhvk");
+	h.complain("fgsh");
 	return (0);
 }
