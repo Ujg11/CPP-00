@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 14:33:25 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/22 19:38:03 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:23:31 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void Harl::complain( std::string level )
 	{
 		for (size_t i = 0; i < state->size() - 1; i++)
 		{
-			if (level.compare(state[i]) == 0)
+			if (level == state[i])
 			{
 				(this->*f[i])(); //cridem a la funció en concret
 				return ;
