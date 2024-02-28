@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 21:10:46 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/26 21:10:46 by ojimenez         ###   ########.fr       */
+/*   Created: 2024/02/28 12:23:30 by ojimenez          #+#    #+#             */
+/*   Updated: 2024/02/28 12:23:30 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#pragma once
 
 #include <iostream>
 
-class Animal
+class Brain
 {
-	protected:
-		std::string type;
+	private:
+		std::string ideas[100];
 
 	public:
-		Animal();
-		Animal(const Animal &cpy);
-		Animal &operator=(const Animal &cpy);
-		virtual ~Animal(); //Para que tambien se llame al destructor de las clases derivadas
-
-		virtual void	makeSound() const;
-		std::string	getType() const;
+		Brain();
+		Brain(const Brain &cpy);
+		Brain &operator=(const Brain &cpy);
+		~Brain();
 };
 
-#endif
