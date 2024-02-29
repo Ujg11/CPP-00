@@ -6,11 +6,11 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 22:23:54 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/22 15:34:34 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/02/29 15:29:05 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = fragtrap
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf

@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 22:23:52 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/22 15:30:01 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:27:58 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void)
 {
 	DiamondTrap diamond("Uri");
-	std::cout << diamond.getName() << std::endl;
+	std::cout << diamond.getName() << std::endl; //Usas la funcion de ClapTrap
 	std::cout << diamond.getHitPoints() << std::endl;
 	std::cout << diamond.getEnergyPoints() << std::endl;
 	std::cout << diamond.getAttackDamage() << std::endl;
@@ -23,7 +23,7 @@ int main(void)
 	std::cout << std::endl;
 
 	DiamondTrap diamond2;
-	std::cout << diamond2.getName() << std::endl;
+	std::cout << diamond2.getName() << std::endl; //Usas la funcion de ClapTrap
 	std::cout << diamond2.getHitPoints() << std::endl;
 	std::cout << diamond2.getEnergyPoints() << std::endl;
 	std::cout << diamond2.getAttackDamage() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 17:04:26 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/24 17:04:26 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:25:27 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavT
 	this->_attackDamage = FragTrap::FTAttack;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &cpy):ClapTrap(cpy.getName() + "_clap_name"), FragTrap(cpy.getName()), ScavTrap(cpy.getName())
+DiamondTrap::DiamondTrap(const DiamondTrap &cpy):ClapTrap(cpy.getName() + "_clap_name"), ScavTrap(cpy.getName()), FragTrap(cpy.getName())
 {
 	std::cout << "DiamondTrap copy constructor has been called" << std::endl;
 	this->_name = cpy.getName();
