@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 22:23:52 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/22 15:30:01 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/02/29 15:35:37 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
 	st.beRepaired(10);
 
 	ft.highFivesGuys();
-	ft.attack("A aquel");
+	ft.attack("A aquel");//Utilitza el metode de ClapTrap
 	ft.beRepaired(20);
 	ft.takeDamage(50);
 
