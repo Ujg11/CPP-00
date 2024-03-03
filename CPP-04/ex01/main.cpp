@@ -16,30 +16,32 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	Animal* arrayDogsCats[6];
+	int i = 0;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
-	delete meta;
-	delete j;
-	delete i;
+	while (i < 3)
+	{
+		arrayDogsCats[i] = new Dog(); //se crean con un cerebro
+		i++;
+	}
+	while (i < 6)
+	{
+		arrayDogsCats[i] = new Cat(); //se crean con un cerebro
+		i++;
+	}
+	i = 0;
+	while (i < 6)
+	{
+		delete arrayDogsCats[i];
+		i++;
+	}
 	std::cout << std::endl;
 
-	const WrongAnimal *meta2 = new WrongAnimal();
-	const WrongAnimal *wrongCat = new WrongCat();
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
 
-	std::cout << wrongCat->getType() << " " << std::endl;
-	wrongCat->makeSound(); //Hace el sonido de WrongAnimal, no de WrongCat
-	meta2->makeSound();
-
-	delete meta2;
-	delete wrongCat;
+	delete dog;//should not create a leak
+	delete cat;
 
 	return 0;
 }
