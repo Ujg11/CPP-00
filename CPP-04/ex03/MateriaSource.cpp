@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:47:58 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/03 18:47:58 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/05 11:57:58 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void MateriaSource::learnMateria(AMateria* materia)
 	{
 		if (this->_materias[i] == NULL)
 		{
+			std::cout << "Materia learned" << std::endl;
 			this->_materias[i] = materia;
 			return ;
 		}
@@ -65,11 +66,11 @@ void MateriaSource::learnMateria(AMateria* materia)
 }
 
 //Crea una materia a partir de les plantilles que hi ha
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria* MateriaSource::createMateria(std::string const &type)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_materias[i]->getType() == type)
+		if (this->_materias[i] != NULL && this->_materias[i]->getType() == type)
 			return (this->_materias[i]->clone());
 	}
 	return (NULL);

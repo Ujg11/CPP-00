@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:55:20 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/03 19:55:20 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:03:44 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Ice::Ice()
 {
 	std::cout << "Ice default constructor called" << std::endl;
+	this->type = "ice";
 }
 
 Ice::Ice(const Ice &cpy)
@@ -30,6 +31,7 @@ Ice &Ice::operator=(const Ice &cpy)
 	{
 		this->type = cpy.type;
 	}
+	return (*this);
 }
 
 
@@ -40,8 +42,9 @@ Ice::~Ice()
 
 AMateria* Ice::clone() const
 {
-	std::cout << "Ice clone called" << std::endl;
+	std::cout << std::endl << "Ice clone begining:" << std::endl;
 	AMateria *ice = new Ice(*this);
+	std::cout << "Ice clone ended" << std::endl << std::endl;
 	return (ice);
 }
 

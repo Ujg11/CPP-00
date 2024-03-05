@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:55:41 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/03 19:55:41 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:03:56 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Cure::Cure()
 {
 	std::cout << "Cure default constructor called" << std::endl;
+	this->type = "cure";
 }
 
 Cure::Cure(const Cure &cpy)
@@ -30,6 +31,7 @@ Cure &Cure::operator=(const Cure &cpy)
 	{
 		this->type = cpy.type;
 	}
+	return (*this);
 }
 
 Cure::~Cure()
@@ -39,8 +41,9 @@ Cure::~Cure()
 
 AMateria* Cure::clone() const
 {
-	std::cout << "Cure clone called" << std::endl;
+	std::cout << std::endl << "Cure clone begining:" << std::endl;
 	AMateria *cure = new Cure(*this);
+	std::cout << "Cure clone ended" << std::endl << std::endl;
 	return (cure);
 }
 

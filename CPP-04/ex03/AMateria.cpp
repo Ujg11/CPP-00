@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:20:01 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/03 18:20:01 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:39:02 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	std::cout << "First I need to know wich materia I am" << std::endl;
+	std::cout << "First I need to know wich materia I am before use on " << target.getName() << std::endl;
 }

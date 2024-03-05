@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:58:27 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/03 19:58:27 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/04 20:47:15 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ class MateriaSource : public IMateriaSource
 		~MateriaSource();
 
 		void learnMateria(AMateria* materia);
-		AMateria* createMateria(std::string const & type);
+		AMateria* createMateria(std::string const &type);
 };
