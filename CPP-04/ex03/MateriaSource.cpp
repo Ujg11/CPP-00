@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:47:58 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/05 11:57:58 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:07:35 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,13 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &cpy)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			this->_materias[i] = cpy._materias[i]->clone();
+			if (this->_materias[i] != NULL)
+			{
+				delete this->_materias[i];
+				this->_materias[i] = NULL;
+			}
+			if (cpy._materias[i] != NULL)
+				this->_materias[i] = cpy._materias[i]->clone();
 		}
 	}
 	return (*this);
@@ -58,7 +64,7 @@ void MateriaSource::learnMateria(AMateria* materia)
 		if (this->_materias[i] == NULL)
 		{
 			std::cout << "Materia learned" << std::endl;
-			this->_materias[i] = materia;
+			this->_materias[i] = materia->clone();
 			return ;
 		}
 	}

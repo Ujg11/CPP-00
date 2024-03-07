@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:56:41 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/05 14:31:07 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:21:44 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,148 +47,46 @@
 
 int main( void )
 {
-	std::cout << "1. Creating MateriaSource" << std::endl; 
-		IMateriaSource* src = new MateriaSource();
-		std::cout << std::endl;
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "2. \"src\" learning 5 materias" << std::endl;
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		
-		std::cout << std::endl;
-		Ice	*mat = new Ice();
-		src->learnMateria(mat);
-		delete	mat;
-
-		// std::cout << std::endl;
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "3. Creating Character \"vilma\" and \"oktorok\"" << std::endl;
-		Character* vilma = new Character("vilma");
-		std::cout << std::endl;
-
-		Character* oktorok = new Character("oktorok");
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "4. \"vilma\" trying to equip 5 materias and \"oktorok\" one materia" << std::endl;
-		vilma->equip(NULL);
-		
-		AMateria* tmp;
-
-		tmp = src->createMateria("ice");
-		vilma->equip(tmp);
-		tmp = src->createMateria("ice");
-		vilma->equip(tmp);
-		std::cout << &tmp << std::endl;
-
-		tmp = src->createMateria("cure");
-		vilma->equip(tmp);
-		tmp = src->createMateria("cure");
-		vilma->equip(tmp);
-		tmp = src->createMateria("ice");
-		vilma->equip(tmp);
-
-		std::cout << std::endl;
-
-		std::cout << std::endl;
-		tmp = src->createMateria("ice"); //esto lo pongo yo
-		oktorok->equip(tmp);
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "5. Testing Character Assignation overload \"vilma = oktorok\" for deep copy and changed vilma afterwards" << std::endl;	
-		*oktorok = *vilma;
-		
-		vilma->unequip(0);
-		std::cout << "VILMA" << std::endl;
-		std::cout << std::endl;
-
-		std::cout << "OKTOROK" << std::endl;
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "6. Testing character copy constructor for deep copy \"stardust = Character(vilma)\" and changed vilma afterwards" << std::endl;
-		
-		Character* stardust = new Character(*vilma);
-
-		tmp = src->createMateria("ice");
-		vilma->equip(tmp);
-		std::cout << "VILMA" << std::endl;
-		std::cout << std::endl;
-
-		std::cout << "STARDUST" << std::endl;
-
-
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
+	IMateriaSource* creadorMaterial = new MateriaSource();
+	AMateria* gel = new Ice();
+	AMateria* cura = new Cure();
 	
-	std::cout << "7. \"vilma\" using all equiped materias on \"oktorok\" " << std::endl;
-		vilma->use(0, *oktorok);
-		vilma->use(1, *oktorok);
-		vilma->use(2, *oktorok);
-		vilma->use(3, *oktorok);
-		vilma->use(10, *oktorok);
-		vilma->use(-1, *oktorok);
 	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "8. \"vilma\" trying to use unequiped materias on \"oktorok\" " << std::endl;
-		vilma->unequip(0);
-		vilma->use(0, *oktorok);
+	creadorMaterial->learnMateria(gel);
+	creadorMaterial->learnMateria(gel);
+	creadorMaterial->learnMateria(cura);
+	creadorMaterial->learnMateria(cura);
 
 	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "9. New character \"lucifer\" equipping and unequipping materias" << std::endl;
-		ICharacter* lucifer = new Character("lucifer");
-		AMateria *cure = new Cure;
-		AMateria *ice = new Ice;
-		
-
-		lucifer->equip(cure);
-		lucifer->equip(ice);
-		
-		lucifer->unequip(0);
-		lucifer->unequip(1);
-		lucifer->unequip(2);
-
+	Character* uri = new Character("Uri");
 	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-
-	std::cout << "10. Testing if unequiped materia is freed" << std::endl;
-
-		ICharacter* test = new Character("test");
-		
-		tmp = src->createMateria("ice");
-		test->equip(tmp);
-		test->unequip(0);
-
-	std::cout << std::endl;
-
-// ------------------------------------------------------------------------------------ //
-	std::cout << "11. Deleting \"vilma\", \"oktorok\", \"stardust\" and \"lucifer\"" << std::endl;
+	uri->equip(creadorMaterial->createMateria("ice"));
+	uri->equip(creadorMaterial->createMateria("cure"));
+	uri->equip(creadorMaterial->createMateria("cure"));
+	uri->equip(creadorMaterial->createMateria("ice"));
 	
-	delete test;
-	delete lucifer;
-	delete stardust;
-	delete oktorok;
-	delete vilma;
-	delete src;
+	std::cout << std::endl;
+	AMateria* gel2 = new Ice();
+	uri->equip(gel2); //The Uri inventory is full
+	delete gel2;
+	
+	std::cout << std::endl;
 
-	return (0);
+	Character* target = new Character("target");
+	
+	std::cout << std::endl;
+	uri->use(0, *target);
+	uri->use(2, *target);
+	std::cout << std::endl;
+	uri->unequip(3);
+	uri->unequip(2);
+	std::cout << std::endl;
+	uri->use(2, *target); //No Materia to use :(
+	std::cout << std::endl;
+	
+	delete gel;
+	delete cura;
+	delete creadorMaterial;
+	delete uri;
+	delete target;
 }

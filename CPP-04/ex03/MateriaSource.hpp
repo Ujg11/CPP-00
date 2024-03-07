@@ -6,13 +6,15 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:58:27 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/04 20:47:15 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 12:41:22 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 #include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource

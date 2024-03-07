@@ -6,13 +6,13 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 21:10:26 by ojimenez          #+#    #+#              #
-#    Updated: 2024/02/26 21:10:26 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/03/07 12:01:03 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = polymorphism01
 CPP = c++
-FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 #-fsanitize=address
 RM = rm -rf
 
 #SOURCE

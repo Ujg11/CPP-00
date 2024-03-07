@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:35:10 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/05 14:34:43 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:03:33 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,15 @@ Character &Character::operator=(const Character &cpy)
 			}
 			this->_inventory[i] = cpy._inventory[i]->clone();
 		}
+		
 		this->cleanTrash();
 		for (int i = 0; i < 10; i++)
 		{
-			/*if (this->_trash[i] != NULL)
-			{
-				delete this->_trash[i];
-				this->_trash[i] = NULL;
-			}*/
 			if (cpy._trash[i] != NULL)
 				this->_trash[i] = cpy._trash[i]->clone();
 		}
 	}
+	
 	return (*this);
 }
 
@@ -133,17 +130,17 @@ void Character::use(int idx, ICharacter& target)
 		//Aqui no entra
 		std::cout << "Character " << this->getName() << " uses " << this->_inventory[idx]->getType() << std::endl;
 		this->_inventory[idx]->use(target);
+		return ;
 	}
+	std::cout << "No Materia to use :(" << std::endl;
 }
 
 void Character::cleanTrash()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		std::cout << i << std::endl;
 		if (this->_trash[i])
 		{
-			std::cout << "Arriba" << std::endl;
 			delete this->_trash[i];
 			this->_trash[i] = NULL;
 		}
