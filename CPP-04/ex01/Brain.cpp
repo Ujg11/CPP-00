@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:23:39 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/02/28 12:23:39 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 12:03:57 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Brain::Brain()
 	std::string idea = ""; 
 	for (int i = 0; i < 100; i++)
 	{
-		idea = "Esta es mi idea numero " + i;
+		idea = "Tengo una idea";
 		this->ideas[i] = idea;
 	}
 }

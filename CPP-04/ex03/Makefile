@@ -6,13 +6,13 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/03 18:58:16 by ojimenez          #+#    #+#              #
-#    Updated: 2024/03/05 14:15:56 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/03/07 14:04:49 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = interface
 CPP = c++
-FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 #-fsanitize=address
 RM = rm -rf
 
 #SOURCE

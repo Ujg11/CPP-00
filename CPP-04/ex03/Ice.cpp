@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:55:20 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/03/05 12:03:44 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/03/07 12:30:38 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Ice &Ice::operator=(const Ice &cpy)
 	}
 	return (*this);
 }
-
 
 Ice::~Ice()
 {
