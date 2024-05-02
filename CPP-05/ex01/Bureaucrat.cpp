@@ -95,7 +95,6 @@ int Bureaucrat::getLOWEST_GRADE()
 	return (LOWEST_GRADE);
 }
 
-
 const char	*Bureaucrat::GradeTooHighException::what(void) const throw()
 {
 	return ("Grade is too high, assigned 75");
@@ -111,4 +110,3 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &bur)
 	out << bur.getName() << ", bureaucrat grade " << bur.getGrade() << ".";
 	return (out);
 }
-

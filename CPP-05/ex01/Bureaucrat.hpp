@@ -44,7 +44,7 @@ class Bureaucrat
 		class GradeTooHighException: public std::exception
 		{
 			public:
-			//Funció heredada de std::exception que obté una descripció del error associat
+			//Funció heredada de std::exception que obté una descripció del error associat. S'executa al haber-hi una excepcio del tipus
 				virtual const char	*what(void) const throw();
 		};
 		class GradeTooLowException: public std::exception

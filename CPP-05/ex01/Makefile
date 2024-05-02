@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp Bureaucrat.cpp
-INC = Bureaucrat.hpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
+INC = Bureaucrat.hpp Form.hpp
 
 #DIRECTORIES
 D_OBJ = obj
