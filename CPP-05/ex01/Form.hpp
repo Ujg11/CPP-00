@@ -6,15 +6,19 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:50:14 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/04/30 21:50:14 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:53:13 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+//#pragma once
+#ifndef FORM_HPP
+# define FORM_HPP
 
-#include <iostream>
-#include <stdexcept>
-#include "Bureaucrat.hpp"
+# include <iostream>
+# include <stdexcept>
+//# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -36,6 +40,8 @@ class Form
 		int getGradeRequiredToSign() const;
 		int getGradeRequiredToExecute() const;
 
+		void beSigned(const Bureaucrat &b);
+		
 		class GradeTooHighException: public std::exception
 		{
 			public:
@@ -51,4 +57,4 @@ class Form
 
 std::ostream &operator<<(std::ostream &out, const Form &f);
 
-
+#endif

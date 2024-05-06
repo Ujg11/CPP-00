@@ -6,16 +6,17 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:50:53 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/04/29 20:50:53 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:47:15 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int Bureaucrat::HIGHEST_GRADE = 1;
 int Bureaucrat::LOWEST_GRADE = 150;
 
-Bureaucrat::Bureaucrat(): _name("default"), _grade(150)
+Bureaucrat::Bureaucrat(void): _name("default"), _grade(150)
 {
 	std::cout << "Bureaucrat defaul constructor called" << std::endl;
 }
@@ -42,12 +43,26 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy)
 	return (*this);
 }
 
-Bureaucrat::~Bureaucrat()
+Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << "Bureaucrat " << this->_name << " destructor called" << std::endl;
 }
 
-std::string Bureaucrat::getName() const
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't sign " << form.getName()
+			<< " because " << e.what() << std::endl;
+	}
+}
+
+std::string Bureaucrat::getName(void) const
 {
 	return (this->_name);
 }
@@ -111,4 +126,3 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &bur)
 	out << bur.getName() << ", bureaucrat grade " << bur.getGrade() << ".";
 	return (out);
 }
-

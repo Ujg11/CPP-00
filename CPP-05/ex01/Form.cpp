@@ -6,11 +6,12 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:50:04 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/04/30 21:50:04 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:54:00 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(): _name("default"), _gradeSign(75), _gradeExecute(75)
 {
@@ -20,6 +21,7 @@ Form::Form(): _name("default"), _gradeSign(75), _gradeExecute(75)
 Form::Form(std::string name, int gSign, int gExec): _name(name), _gradeSign(gSign), _gradeExecute(gExec)
 {
 	std::cout << "Form parameter constructor called" << std::endl;
+	this->_signed = false;
 	if (this->_gradeSign < Bureaucrat::getHIGHEST_GRADE())
 		throw (Form::GradeTooHighException());
 	else if (this->_gradeSign > Bureaucrat::getLOWEST_GRADE())
@@ -49,6 +51,18 @@ Form &Form::operator=(const Form &cpy)
 Form::~Form()
 {
 	std::cout << "Form destructor called" << std::endl;
+}
+
+void Form::beSigned(const Bureaucrat &b)
+{
+	if (b.getGrade() <= this->_gradeSign)
+	{
+		this->_signed = true;
+	}
+	else
+	{
+		throw (Form::GgradeTooLowException());
+	}
 }
 
 std::string Form::getName() const

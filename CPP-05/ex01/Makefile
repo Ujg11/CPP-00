@@ -6,11 +6,11 @@
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 20:49:13 by ojimenez          #+#    #+#              #
-#    Updated: 2024/04/29 20:49:13 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/05/02 18:34:40 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = form
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
