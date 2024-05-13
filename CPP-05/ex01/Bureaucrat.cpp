@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:50:53 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/04/29 20:50:53 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/05/13 16:50:24 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,20 @@ void Bureaucrat::decrementGrade()
 	this->setGrade(this->getGrade() + 1);
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't sign " << form.getName()
+			<< " because " << e.what() << std::endl;
+	}
+}
+
 int Bureaucrat::getHIGHEST_GRADE()
 {
 	return (HIGHEST_GRADE);
@@ -95,11 +109,13 @@ int Bureaucrat::getLOWEST_GRADE()
 	return (LOWEST_GRADE);
 }
 
+//Definim la funcio what a la clase GradeTooHighException
 const char	*Bureaucrat::GradeTooHighException::what(void) const throw()
 {
 	return ("Grade is too high, assigned 75");
 }
 
+//Definim la funcio what a la clase GradeTooLowException
 const char	*Bureaucrat::GradeTooLowException::what(void) const throw()
 {
 	return ("Grade is too low, assigned 75");

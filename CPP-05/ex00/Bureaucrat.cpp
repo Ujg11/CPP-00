@@ -6,12 +6,11 @@
 /*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:50:53 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/05/02 18:47:15 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/05/13 16:07:28 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 
 int Bureaucrat::HIGHEST_GRADE = 1;
 int Bureaucrat::LOWEST_GRADE = 150;
@@ -46,20 +45,6 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &cpy)
 Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << "Bureaucrat " << this->_name << " destructor called" << std::endl;
-}
-
-void Bureaucrat::signForm(Form &form)
-{
-	try
-	{
-		form.beSigned(*this);
-		std::cout << this->getName() << " signed " << form.getName() << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << this->getName() << " couldn't sign " << form.getName()
-			<< " because " << e.what() << std::endl;
-	}
 }
 
 std::string Bureaucrat::getName(void) const
