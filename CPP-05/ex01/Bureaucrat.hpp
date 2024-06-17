@@ -24,7 +24,7 @@ class Bureaucrat
 		int					_grade;
 		static int			HIGHEST_GRADE;
 		static int			LOWEST_GRADE;
-		
+
 		void setGrade(int grade);
 
 	public:

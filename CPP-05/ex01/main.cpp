@@ -18,7 +18,6 @@ int main(void)
 	Bureaucrat b1("Uri", 51);
 	Form form("Contracte", 50, 10);
 	
-	std::cout << b1 << std::endl;
 	std::cout << form << std::endl;
 	std::cout << "Probamos de firmar el Form:" << std::endl;
 	try 
