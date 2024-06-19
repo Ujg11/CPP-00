@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/29 20:49:38 by ojimenez          #+#    #+#              #
-#    Updated: 2024/04/29 20:49:38 by ojimenez         ###   ########.fr        #
+#    Created: 2024/04/29 20:49:27 by ojimenez          #+#    #+#              #
+#    Updated: 2024/04/29 20:49:27 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = ex03
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp 
-INC = 
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+INC = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.cpp ShrubberyCreationForm.hpp Intern.hpp
 
 #DIRECTORIES
 D_OBJ = obj
