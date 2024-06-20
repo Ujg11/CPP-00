@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:19:45 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/18 11:19:45 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:45:44 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ RobotomyRequestForm::~RobotomyRequestForm()
 void RobotomyRequestForm::executeConcrete() const
 {
 	std::cout << "Wait please (drilling noises in the background...)" << std::endl;
-	//sleep(3);
 	std::srand(std::time(0));
 	if (std::rand() % 2 == 0)
 		std::cout << this->_target << " has been robotomized successfully 50% of the time" << std::endl; 

@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
+#    By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 20:49:27 by ojimenez          #+#    #+#              #
-#    Updated: 2024/04/29 20:49:27 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/06/20 15:47:27 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = internship
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
