@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp 
-INC = 
+SRC = main.cpp ScalarConverter.cpp
+INC = ScalarConverter.hpp
 
 #DIRECTORIES
 D_OBJ = obj
