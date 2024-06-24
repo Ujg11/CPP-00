@@ -69,8 +69,6 @@ void identify(Base& p)
 	catch(const std::exception& e) {}	
 }
 
-
-
 int main(void)
 {
 	std::srand(std::time(0));
