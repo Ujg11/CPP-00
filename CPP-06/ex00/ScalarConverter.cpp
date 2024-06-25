@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:44:49 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/20 11:44:49 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:34:34 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void ScalarConverter::printFloat(float f)
 		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
-	if (f >= INT_MIN && f <= INT_MAX)
+	if (f >= INT_MIN && f <= static_cast<float>(INT_MAX))
 		std::cout << "int: " << static_cast<int>(f) << std::endl;
 	else
 		std::cout << "int: impossible" << std::endl;
@@ -149,7 +149,7 @@ void ScalarConverter::convert(std::string param)
 	}
 	else if (param.find(".") == std::string::npos)
 	{
-		for (int i = 0; i < param.length(); i++)
+		for (size_t i = 0; i < param.length(); i++)
 		{
 			if (i == 0 && param[i] == '-')
 				i = 0;
@@ -166,7 +166,7 @@ void ScalarConverter::convert(std::string param)
 	}
 	else if (param.find(".") != std::string::npos && param.find("f") == std::string::npos)
 	{
-		for (int i = 0; i < param.length(); i++)
+		for (size_t i = 0; i < param.length(); i++)
 		{
 			if (i == 0 && param[i] == '-')
 				i = 0;
@@ -180,7 +180,7 @@ void ScalarConverter::convert(std::string param)
 	}
 	else if (param.find(".") != std::string::npos && param.find("f") != std::string::npos)
 	{
-		for (int i = 0; i < param.length(); i++)
+		for (size_t i = 0; i < param.length(); i++)
 		{
 			if (i == 0 && param[i] == '-')
 				i = 0;

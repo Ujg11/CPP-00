@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 15:59:10 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/23 15:59:10 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:44:55 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ Data* Serializer::deserialize(uintptr_t raw)
 {
 	return (reinterpret_cast<Data*>(raw));
 }
+

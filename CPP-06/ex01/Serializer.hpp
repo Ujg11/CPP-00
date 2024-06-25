@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 15:58:55 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/23 15:58:55 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:46:22 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
+
+typedef unsigned long uintptr_t;
 
 typedef struct Data
 {

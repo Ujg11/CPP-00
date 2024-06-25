@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:44:25 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/20 11:44:25 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:32:22 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # include <iostream>
 # include <string> 
+# include <cstdlib>
 # include <climits> //INT_MIN, INT_MAX
 # include <cfloat> //FLT_MIN, FLT_MAX
 # include <cctype> //std::isdigit, std::isprint

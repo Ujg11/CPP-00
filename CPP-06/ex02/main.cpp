@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 18:00:57 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/23 18:00:57 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:52:47 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 #include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
@@ -94,4 +95,10 @@ int main(void)
 	identify(base4);
 	identify(*base4);
 	std::cout << std::endl;
+
+	delete base1;
+	delete base2;
+	delete base3;
+	delete base4;
 }
+

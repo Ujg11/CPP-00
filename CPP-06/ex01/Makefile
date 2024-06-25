@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
+#    By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/20 11:42:40 by ojimenez          #+#    #+#              #
-#    Updated: 2024/06/20 11:42:40 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/06/25 16:46:05 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp 
-INC = 
+SRC = main.cpp Serializer.cpp
+INC = Serializer.hpp
 
 #DIRECTORIES
 D_OBJ = obj
