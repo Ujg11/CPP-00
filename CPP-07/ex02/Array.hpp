@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 16:41:44 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/25 19:23:38 by ojimenez         ###   ########.fr       */
+/*   Created: 2024/06/25 19:32:55 by ojimenez          #+#    #+#             */
+/*   Updated: 2024/06/25 19:49:41 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#pragma once
 
-void incrementInt(int &i)
+# include <iostream>
+
+template <typename T>
+class Array
 {
-	i++;
-}
+	private:
+	
+	public:
+		Array();
+		Array(unsigned int n);
+		Array(const Array &cpy);
+		Array &operator=(const Array &cpy);
+		Array &operator[]();
+		~Array();
+};
 
-void printString(std::string &s)
-{
-	std::cout << s << std::endl;
-}
+# include "Array.tpp"
 
-int main(void)
-{
-	int a[] = {1, 2, 3, 4, 5};
-	std::string s[] = {"hola", "que", "tal"};
 
-	iter(a, 5, incrementInt);
-	std::cout << "a = { " << a[0] << ", " << a[1] << ", " << a[2] << ", " << a[3] << ", " << a[4] << "}" << std::endl << std::endl;
-	iter(s, 3, printString);
-}

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+         #
+#    By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/20 11:42:33 by ojimenez          #+#    #+#              #
-#    Updated: 2024/06/20 11:42:33 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/06/25 19:31:22 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp ScalarConverter.cpp
-INC = ScalarConverter.hpp
+SRC = main.cpp 
+INC = 
 
 #DIRECTORIES
 D_OBJ = obj
