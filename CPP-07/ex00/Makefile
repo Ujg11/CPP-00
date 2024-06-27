@@ -33,19 +33,19 @@ dir:
 
 $(D_OBJ)/%.o: %.cpp Makefile
 		$(CPP) $(FLAGS) -MMD -c $< -o $@
-		echo "file: $< to $@"
+		@echo "file: $< to $@"
 	
 $(NAME): $(OBJ) Makefile
 		$(CPP) $(FLAGS) $(OBJ) -o $(NAME)
-		echo "Project $(NAME) successfully compiled!!"
+		@echo "Project $(NAME) successfully compiled!!"
 
 clean:
 		$(RM) $(D_OBJ)
-		echo "$(NAME) object files cleaned successfully!"
+		@echo "$(NAME) object files cleaned successfully!"
 
 fclean: clean
 		$(RM) $(NAME)
-		echo "All removed successfully!"
+		@echo "All removed successfully!"
 
 re: fclean all
 

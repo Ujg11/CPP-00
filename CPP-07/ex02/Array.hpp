@@ -18,16 +18,17 @@ template <typename T>
 class Array
 {
 	private:
-	
+		T 				*_array;
+		unsigned int	_n;
+
 	public:
 		Array();
 		Array(unsigned int n);
 		Array(const Array &cpy);
 		Array &operator=(const Array &cpy);
-		Array &operator[]();
+		T &operator[](unsigned int position);
 		~Array();
+		unsigned int size() const;
 };
 
 # include "Array.tpp"
-
-
