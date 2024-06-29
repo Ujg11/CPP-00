@@ -17,7 +17,7 @@ RM = rm -rf
 
 #SOURCE
 SRC = main.cpp 
-INC = 
+INC = MutantStack.hpp
 
 #DIRECTORIES
 D_OBJ = obj
