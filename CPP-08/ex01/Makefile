@@ -16,8 +16,8 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp 
-INC = 
+SRC = main.cpp Span.cpp
+INC = Span.hpp
 
 #DIRECTORIES
 D_OBJ = obj
