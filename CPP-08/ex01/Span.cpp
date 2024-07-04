@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 16:44:30 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/28 16:44:30 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/04 16:40:54 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int Span::shortestSpan()
 		throw Span::SpanIsImpossibleException(); 
 	
 	span = auxVec[1] - auxVec[0];
-	for (int i = 2; i < this->size(); i++)
+	for (size_t i = 2; i < this->size(); i++)
 	{
 		aux = auxVec[i] - auxVec[i - 1];
 		if (aux < span)
