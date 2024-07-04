@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 19:26:48 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/25 19:42:52 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/04 16:03:01 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ Array<T>::Array(unsigned int n)
 template <typename T>
 Array<T>::Array(const Array &cpy)
 {
-	this->_n = cpy->_n;
-	this->_array = new T[cpy->_n];
-	for (unsigned int i = 0; i < cpy->_n; i++)
-		this->_array[i] = cpy->_array[i];
+	this->_n = cpy._n;
+	this->_array = new T[cpy._n];
+	for (unsigned int i = 0; i < cpy._n; i++)
+		this->_array[i] = cpy._array[i];
 }
 
 template <typename T>
@@ -44,8 +44,8 @@ Array<T> &Array<T>::operator=(const Array &cpy)
 				delete [] this->_array;
 		this->_n = cpy->_n;
 		this->_array = new T[cpy->_n];
-		for (unsigned int i = 0; i < cpy->_n; i++)
-			this->_array[i] = cpy->_array[i];
+		for (unsigned int i = 0; i < cpy._n; i++)
+			this->_array[i] = cpy._array[i];
 	}
 	return (*this);
 }
@@ -61,7 +61,7 @@ T &Array<T>::operator[](unsigned int position)
 {
 	if (position >= 0 && position < this->_n)
 		return (this->_array[position]);
-	throw std::exception();
+	throw std::range_error("Index out of bounds");
 }
 
 template <typename T>

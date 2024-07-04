@@ -6,60 +6,51 @@
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 21:30:26 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/25 19:25:26 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/04 15:59:18 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 100
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
+    Array<int> arrInts(10);
+    Array<std::string> arrStrings(3);
 
-    for (int i = 0; i < MAX_VAL; i++)
+    try
     {
-        if (mirror[i] != numbers[i])
+        for (size_t i = 0; i < arrInts.size(); i++)
         {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
+            arrInts[i] = i * 4;
         }
-    }
-    try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
+        std::cout << "[";
+        for (size_t i = 0; i < arrInts.size(); i++)
+        {
+            std::cout << arrInts[i] << " ";
+        }
+        std::cout << "]" << std::endl;
+        std::cout << arrInts[10];//exception
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-
-    for (int i = 0; i < MAX_VAL; i++)
+    try
     {
-        numbers[i] = rand();
+        arrStrings[0] = "Hola";
+        arrStrings[1] = "que";
+        arrStrings[2] = "tal";
+        for (size_t i = 0; i < arrStrings.size(); i++)
+        {
+            std::cout << arrStrings[i] << std::endl;
+        }
+        std::cout << arrInts[-1];//exception
     }
-    delete [] mirror;
-    return 0;
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }

@@ -6,7 +6,7 @@
 #    By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/20 11:42:33 by ojimenez          #+#    #+#              #
-#    Updated: 2024/06/25 19:31:22 by ojimenez         ###   ########.fr        #
+#    Updated: 2024/07/04 14:57:55 by ojimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS = -Wall -Wextra -Werror -g -pedantic -std=c++98 -fsanitize=address
 RM = rm -rf
 
 #SOURCE
-SRC = main.cpp 
+SRC = main.cpp
 INC = Array.hpp
 
 #DIRECTORIES
@@ -31,7 +31,7 @@ all : dir $(NAME)
 dir:
 	@mkdir -p $(D_OBJ)
 
-$(D_OBJ)/%.o: %.cpp Makefile
+$(D_OBJ)/%.o: %.cpp  $(INC) Array.tpp Makefile
 		$(CPP) $(FLAGS) -MMD -c $< -o $@
 		@echo "file: $< to $@"
 	

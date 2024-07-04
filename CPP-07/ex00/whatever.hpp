@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 21:14:15 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/23 21:14:15 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/04 14:42:57 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,3 @@ T max(T a, T b)
 	else
 		return (b);
 }
-

@@ -6,13 +6,14 @@
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 19:32:55 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/06/25 19:49:41 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/04 15:08:23 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
+# include <cstdlib>
 
 template <typename T>
 class Array
