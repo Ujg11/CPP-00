@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 00:42:03 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/07/04 17:10:03 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:55:24 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,9 @@ int main()
 	{
 		std::cout << *i << std::endl;
 	}
+	MutantStack<int>::iterator start = mstack.begin();
+    ++start;
+    --start;
+	std::cout << *start << std::endl;
 	return (0);
 }
