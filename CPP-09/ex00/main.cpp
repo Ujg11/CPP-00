@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "BitcoinExchange.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -19,5 +19,7 @@ int main(int argc, char *argv[])
 		std::cout << "Error: could not open file." << std::endl;
 		return (1);
 	}
-	
+	BitcoinExchange btc;
+	btc.openFile(argv[1]);
+	return (0);
 }
