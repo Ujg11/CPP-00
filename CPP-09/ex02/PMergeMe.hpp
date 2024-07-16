@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PMergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 17:32:26 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/07/10 17:32:26 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/16 18:00:24 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <vector>
 # include <deque>
 # include <ctime>
-# include <chrono>
 # include <algorithm>
+# include <cstdlib>
 
 class PMergeMe
 {

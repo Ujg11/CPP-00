@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PMergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 17:32:19 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/07/10 17:32:19 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/16 18:50:50 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,38 @@ bool PMergeMe::checkNums(const std::string nums) const
 
 void PMergeMe::printVector()
 {
-	for (std::vector<int>::iterator i = vec->begin(); i != vec->end(); ++i)
+	for (size_t i = 0; i < vec->size(); i++)
 	{
-		std::cout << " " << *i;
+		if (i < 4 && vec->size() > 5)
+			std::cout << " " << (*vec)[i];
+		else if (vec->size() > 5)
+		{
+			std::cout << " [...]";
+			break ;
+		}
+		else if (i < 5 && vec->size() <= 5)
+		{
+			std::cout << " " << (*vec)[i];
+		}
 	}
 	std::cout << std::endl;
 }
 
 void PMergeMe::printDeque()
 {
-	for (std::deque<int>::iterator i = que->begin(); i != que->end(); ++i)
+	for (size_t i = 0; i < que->size(); i++)
 	{
-		std::cout << " " << *i;
+		if (i < 4 && que->size() > 5)
+			std::cout << " " << (*que)[i];
+		else if (que->size() > 5)
+		{
+			std::cout << " [...]";
+			break ;
+		}
+		else if (i < 5 && que->size() <= 5)
+		{
+			std::cout << " " << (*que)[i];
+		}
 	}
 	std::cout << std::endl;
 }
@@ -118,7 +138,7 @@ void PMergeMe::mergeVector(int left, int right)
 		}
 		while (i < mid)
 		{
-			aux.push_back((*vec)[j]);
+			aux.push_back((*vec)[i]);
 			i++;
 		}
 		while (j < right)
@@ -144,6 +164,7 @@ void PMergeMe::mergeDeque(int left, int right)
 	int i;
 	int j;
 
+	
 	if (right - left > 1)
 	{
 		int mid = left + (right - left) / 2;
@@ -166,7 +187,7 @@ void PMergeMe::mergeDeque(int left, int right)
 		}
 		while (i < mid)
 		{
-			aux.push_back((*que)[j]);
+			aux.push_back((*que)[i]);
 			i++;
 		}
 		while (j < right)
@@ -197,7 +218,7 @@ void PMergeMe::merge(int args, std::string nums[])
 			std::cout << "Error: bad input" << std::endl;
 			return ;
 		}
-		num = std::stoi(nums[i]);
+		num = std::atoi(nums[i].c_str());
 		this->vec->push_back(num);
 		this->que->push_back(num);
 	}

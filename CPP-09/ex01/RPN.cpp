@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojimenez <ojimenez@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:08:57 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/07/10 16:08:57 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/16 17:08:56 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void RPN::calculate(std::string polish)
 {
 	double	a;
 	double	b;
-	char	c;
 	
 	if (!checkExpression(polish))
 	{
