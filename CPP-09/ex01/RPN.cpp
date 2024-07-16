@@ -6,7 +6,7 @@
 /*   By: ojimenez <ojimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:08:57 by ojimenez          #+#    #+#             */
-/*   Updated: 2024/07/16 17:08:56 by ojimenez         ###   ########.fr       */
+/*   Updated: 2024/07/16 21:51:00 by ojimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,11 @@ void RPN::calculate(std::string polish)
 			this->stk.push(polish[i] - '0');
 		else if (isCorrectOperator(polish[i]))
 		{
+			if (this->stk.size() < 2)
+			{
+				std::cout << "Error: Not enough operands for operator" << std::endl;
+				return ;
+			}
 			b = this->stk.top();
 			this->stk.pop();
 			a = this->stk.top();
